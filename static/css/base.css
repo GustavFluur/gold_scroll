@@ -1,0 +1,11 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/shopping-mac.mp4') center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #aaa;
+    font-family: 'Lato';
+}
