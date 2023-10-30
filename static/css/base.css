@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    background: url('/media/gold_scroll.jpeg') center center fixed;
-    background-size: cover;
+    background: url('/media/shooping-main.jpg') center center fixed;
+    background-size: 100%;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
@@ -47,12 +47,12 @@ body {
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
+.text-gold {
+    color: gold !important;
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid red !important;
 }
 
 /* -------------------------------- Media Queries */
