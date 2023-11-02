@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/home-gold-scroll.jpg') center center fixed;
+    background: url('/media/gold_scroll_home.jpg') center center fixed;
     background-size: 100%;
     height: calc(100vh - 164px);
     color: #555;
@@ -44,7 +44,7 @@ body {
 .btn-black:active,
 .btn-black:focus {
     background: #222;
-    color: white;
+    color: red;
 }
 
 .text-gold {
@@ -77,4 +77,5 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
 }
