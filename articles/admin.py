@@ -20,6 +20,8 @@ class ArticleAdmin(admin.ModelAdmin):
         'created_at',
     )
 
+    ordering = ('created_at',)
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Article, ArticleAdmin)
