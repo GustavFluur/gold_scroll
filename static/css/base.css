@@ -58,8 +58,6 @@ body {
 .articles_surface {
     height: 100%;
     width: 100%;
-    top:0;
-    left:0;
     position: relative;
     z-index: -1;
 }
