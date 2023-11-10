@@ -55,6 +55,15 @@ body {
     border: 1px solid red !important;
 }
 
+.articles_surface {
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    position: relative;
+    z-index: -1;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

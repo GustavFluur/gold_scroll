@@ -7,7 +7,7 @@ def index(request):
     articles = Article.objects.filter(is_sold=False)[0:6]
     categories = Category.objects.all()
 
-
+    print(articles)
     return render(request, 'core/index.html', {
         'categories': categories,
         'articles': articles,

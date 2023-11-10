@@ -7,7 +7,7 @@ from .models import Article
 def omnis_articles(request):
 
     articles = Article.objects.all()
-
+    print(articles)
     context = {
         'articles': articles,
     }
