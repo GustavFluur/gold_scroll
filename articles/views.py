@@ -13,8 +13,10 @@ def omnis_articles(request):
     categories = None
 
     if request.GET:
+        print(request.GET)
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
+            print(categories)
             articles = articles.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
      
@@ -32,6 +34,7 @@ def omnis_articles(request):
     context = {
         'articles': articles,
         'search_keyword': query,
+        'contemporary_categories': categories,
     }
 
     return render(request, 'articles/articles.html', context)

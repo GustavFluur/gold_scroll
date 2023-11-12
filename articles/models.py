@@ -17,7 +17,7 @@ class Article (models.Model):
     description = models.TextField()
     price = models.FloatField()
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=8024, null=True, blank=True)
+    image_url = models.URLField(max_length=9999, null=True, blank=True)
     image = models.ImageField(upload_to='article_images', blank=True)
     is_sold = models.BooleanField(default=False)
     created_by = models.ForeignKey(User, related_name='articles', on_delete=models.CASCADE)
