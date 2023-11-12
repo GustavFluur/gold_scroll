@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Article
+from .models import Article, Category
 
 # Create your views here.
 
@@ -9,7 +9,8 @@ from .models import Article
 def omnis_articles(request):
 
     articles = Article.objects.all()
-    query = None 
+    query = None
+     
 
     if request.GET:
         if 'q' in request.GET:
