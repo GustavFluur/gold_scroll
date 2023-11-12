@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Article
 
 # Create your views here.
@@ -7,8 +9,21 @@ from .models import Article
 def omnis_articles(request):
 
     articles = Article.objects.all()
+    query = None 
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "search criteria denied - please search again!")
+                return redirect(reverse('articles'))
+            
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            articles = articles.filter(queries)
+
     context = {
         'articles': articles,
+        'search_keyword': query,
     }
 
     return render(request, 'articles/articles.html', context)
