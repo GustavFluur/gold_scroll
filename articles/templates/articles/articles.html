@@ -75,4 +75,19 @@
         </div>
     </div>
 </div>
+<div class="return-button shadow-lg rounded-5 border border-black">
+    <a class="btt-link d-flex h-100">
+        <i class="far fa-arrow-alt-circle-up mx-auto my-auto" style="color: #ffd500;"></i>
+    </a>	
+</div>
+{% endblock %}
+
+{% block articles_js %}
+
+{{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0)
+        })
+    </script>
 {% endblock %}
