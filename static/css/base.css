@@ -46,7 +46,8 @@ body {
 .btn-black:focus {
     background: #222222;
     color: rgb(255, 221, 0);
-    opacity: 0.4;
+    opacity: 0.6;
+    
 }
 
 .text-gold {
@@ -95,18 +96,24 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    color: #ffd500;
+    justify-content: flex-end;
+
+}
+
+.fa-arrow-alt-circle-up:before {
+    height: 100%;
+    width: 100%;
 }
 
 .return-button a {
     display: flex;
     height: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.return-button {
-    color: #ffd500
-}
 
 /* -------------------------------- Media Queries */
 
