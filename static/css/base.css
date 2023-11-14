@@ -44,16 +44,17 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: red;
+    background: #222222;
+    color: rgb(255, 221, 0);
+    opacity: 0.4;
 }
 
 .text-gold {
     color: gold !important;
 }
 
-.border-black {
-    border: 1px solid red !important;
+.border-btn {
+    border: 2px solid gold !important;
 }
 
 .articles_surface {
@@ -67,6 +68,10 @@ body {
 .card-img-top {
     width: 100%;
     height: auto;
+    box-shadow: 1 5px 10px 0 rgba(0, 0, 0, 0.155);
+    margin: auto;
+    text-align: center;
+    font-family: 'Lato';
 }
 
 .article {
@@ -81,7 +86,6 @@ body {
 .article-content {
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
 }
 
