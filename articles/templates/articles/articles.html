@@ -13,10 +13,32 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="logo-font font-weight-bold text-white">Gold Products</h2>
+            <h2 class="logo-font font-weight-bold text-white">Gold Merchandise</h2>
             <hr class="w-50 mb-1">
         </div>
     </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="font-weight-bold text-white text-center">Categories</h3>
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                    {% for category in categories %}
+                        <div>
+                            <div>
+                                <a href="#">
+                                    <div class="p-6 bg-white rounded-b-xl">
+                                        <h2 class="text-xs">{{ category.name }}</h2>
+                                        <p class="text-white bg-dark">{{ category.articles.count }} merchandises</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="row">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2"></div>
@@ -80,6 +102,8 @@
         <i class="far fa-arrow-alt-circle-up mx-auto my-auto" style="color: #ffd500;"></i>
     </a>	
 </div>
+
+
 {% endblock %}
 
 {% block articles_js %}
