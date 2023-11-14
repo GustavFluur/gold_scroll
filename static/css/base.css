@@ -101,10 +101,6 @@ body {
 
 }
 
-.fa-arrow-alt-circle-up:before {
-    height: 100%;
-    width: 100%;
-}
 
 .return-button a {
     display: flex;
