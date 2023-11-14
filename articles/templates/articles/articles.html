@@ -17,27 +17,33 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
+
     <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center">
-                <h3 class="font-weight-bold text-white text-center">Categories</h3>
+        <div class="row flex justify-content-center">
+            <div class="col-12 text-center">
+                <h3 class="font-weight-bold text-white">Categories</h3>
+            </div>
+                {% if categories %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     {% for category in categories %}
-                        <div>
-                            <div>
-                                <a href="#">
-                                    <div class="p-6 bg-white rounded-b-xl">
-                                        <h2 class="text-xs">{{ category.name }}</h2>
-                                        <p class="text-white bg-dark">{{ category.articles.count }} merchandises</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+
+                        
+                        <div class="p-3 bg-white rounded">
+                            <a href="#">
+                                <h2>{{ category.name }}</h2>
+                                <p class="text-white bg-dark">{{ category.articles.count }} merchandises</p>
+                            </a>
+                        </div>         
+
                     {% endfor %}
                 </div>
-            </div>
+                {% else %}
+                 <h3>No categories available!</h3>
+                {% endif %}
+               
         </div>
     </div>
+   
     
     <div class="row">
         <div class="product-container col-10 offset-1">
