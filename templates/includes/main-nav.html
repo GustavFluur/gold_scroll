@@ -4,20 +4,20 @@
             <a class="logo-font font-weight-bold nav-link text-white mr-5 rounded-pill bg-danger" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 About US
             </a>
-            <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Our Story</a>
-                <a href="" class="dropdown-item ">Contact Details</a>
-                <a href="" class="dropdown-item ">Customer Support</a>
+            <div id= "dropdown-nav" class="dropdown-menu" aria-labelledby="all-products-link">
+                <a href="" class="dropdown-item"><button type= "button" class="btn btn-info">Our Story</button></a>
+                <a href="" class="dropdown-item "><button type= "button" class="btn btn-light">Contact Details</button></a>
+                <a href="" class="dropdown-item "><button type= "button" class="btn btn-dark">Customer Support</button></a>
             </div>
         </li>
         <li class="nav-item dropdown bg-warning rounded-pill">
             <a class="logo-font font-weight-bold nav-link text-white mr-5 rounded-pill bg-danger" href="" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Merchandise
             </a>
-            <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="{% url 'articles' %}?sort=price&direction=asc" class="dropdown-item">Price Range</a>
-                <a href="{% url 'articles' %}?sort=rating&direction=desc" class="dropdown-item">Rating Range</a>
-                <a href="{% url 'articles' %}" class="dropdown-item font-weight-bold">All Gold Merchandise</a>
+            <div id= "dropdown-nav" class="dropdown-menu" aria-labelledby="all-products-link">
+                <a href="{% url 'articles' %}?sort=price&direction=asc" class="dropdown-item"><button type= "button" class="btn btn-primary">Price Range <i class="fas fa-dollar-sign"></i></button></a>
+                <a href="{% url 'articles' %}?sort=rating&direction=desc" class="dropdown-item"><button type="button" class="btn btn-success">Ratings <i class="fas fa-star-half-alt"></i></button></a>
+                <a href="{% url 'articles' %}" class="dropdown-item font-weight-bold"><button type="button" class="btn btn-warning">All Gold Merchandise</button></a>
             </div>
         </li>
     </ul>

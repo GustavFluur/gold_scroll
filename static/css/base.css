@@ -38,6 +38,10 @@ body {
     color: white;
 }
 
+#dropdown-nav {
+    background-color: #222222;
+} 
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
