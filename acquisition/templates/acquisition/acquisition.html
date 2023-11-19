@@ -10,28 +10,5 @@
 {% endblock %}
 
 {% block content %}
-    <div class="articles_surface"></div>
-    <div class="container mb-2">
-        <div class="row">
 
-            <h1 class="logo-font mb-5 text-dark bg-warning shadow-lg rounded">Your Purchase</h1>
-
-        </div>
-        <div class="row">
-            <div class="col">
-                {% if purchase_items %}
-                <div class="table-responsive rounded"></div>
-                {% else %}
-                <p class="lead mb-5">Your purchase list is empty!</p>
-                <a href="{% url 'articles' %}" class="btb btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="far fa-hand-point-left" style="color: #ffd500;"></i>
-                    </span>
-                    <span class="text-uppercase text-white bg-dark shadow-lg rounded">Return to Merchandise List</span>
-                </a>
-                {% endif %}
-            </div>
-            
-        </div>
-    </div>
 {% endblock %}
