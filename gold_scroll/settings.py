@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'core',
     'articles',
+    'acquisition',
 ]
 
 MIDDLEWARE = [

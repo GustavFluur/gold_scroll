@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="articles_surface"></div>
+    <div class="container mb-2">
+        <div class="row">
+
+            <h1 class="logo-font mb-5 text-gold">Your Purchase</h1>
+
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if purchase_items %}
+                <div class="table-responsive rounded"></div>
+                {% else %}
+                <p class="lead mb-5">Your purchase list is empty!</p>
+                <a href="{% url 'articles' %}" class="btb btn-outline-black rounded-0 btn-lg">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Return to Merchandise List</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
