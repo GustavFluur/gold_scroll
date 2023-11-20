@@ -11,17 +11,76 @@
 
 {% block content %}
     <div class="articles_surface"></div>
-    <div class="container mb-2">
+    <div class="container mb-2 bg-white">
         <div class="row">
 
-            <h1 class="logo-font mb-5 text-dark bg-warning shadow-lg rounded">Your Purchase</h1>
+            <h1 class="logo-font mb-5 text-dark bg-warning shadow-lg rounded">Gold Acquisition</h1>
 
         </div>
         <div class="row">
             <div class="col">
-                {% if purchase_items %}
+                {% if acquisition_commodities %}
                 <div class="table-responsive rounded">
-                    {{ acquisition_commodities }}
+                    <table class="table table-sm table-borderless">
+                            <thead class="text-black">
+                                <tr>
+                                    <th scope="col">Merchandise Info</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Volume</th>
+                                    <th scope="col">Total-Amount</th>
+                                </tr>
+                            </thead>
+                        
+                        {% for item in acquisition_commodities %}
+                            <tr>
+                                <td class="p-3 w-25">
+                                    <img class="img-fluid rounded" src="{{ item.article.image.url }}">
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                    <p class="my-0 small text-muted">Category: {{ item.article.category|upper }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">${{ item.article.price }}</p>
+                                </td>
+                                <td class="py-3 w-25">
+                                    <p class="my-0">{{ item.quantity }}</p>
+                                </td>
+                                <td class="py-3">
+                                    <p class="my-0">${{ item.article.price }}</p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        <tr>
+                            <td colspan="5" class="pt-5 text-right">
+                                <h6><strong>Total: ${{ total|floatformat:2 }}</strong></h6>
+                                <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+                                <h4 class="mt-4"><strong>Summary: ${{ summary|floatformat:2 }}</strong></h4>
+                                {% if free_shipping_distribution > 0 %}
+                                    <p class="mb-1 text-info">
+                                        If you are spending just <strong>${{ free_shipping_distribution }}</strong> more!
+                                    </p>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right">
+                                <a href="{% url 'articles' %}" class="btn btn-outline-dark rounded-0 btn-lg">
+                                    <span class="icon">
+                                        <i class="far fa-hand-point-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                                <a href="" class="btn btn-black rounded-0 btn-lg">
+                                    <span class="text-uppercase">Secure Purchase</span>
+                                    <span class="icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </span>
+                                </a>
+                            </td>
+                        </tr>
+                </table>
                 </div>
                 {% else %}
                 <p class="lead mb-5">Your purchase list is empty!</p>
