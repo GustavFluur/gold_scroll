@@ -20,7 +20,9 @@
         <div class="row">
             <div class="col">
                 {% if purchase_items %}
-                <div class="table-responsive rounded"></div>
+                <div class="table-responsive rounded">
+                    {{ acquisition_commodities }}
+                </div>
                 {% else %}
                 <p class="lead mb-5">Your purchase list is empty!</p>
                 <a href="{% url 'articles' %}" class="btb btn-outline-black rounded-0 btn-lg">
