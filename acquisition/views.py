@@ -19,5 +19,4 @@ def add_to_acquisition(request, item_id):
         acquisition[item_id] = quantity
     
     request.session['acquisition'] = acquisition
-    print(request.session['acquisition'])
     return redirect(redirect_url)
