@@ -63,3 +63,10 @@ def article_detail(request, article_id):
     }
 
     return render(request, 'articles/articles_detail.html', context)
+
+
+def remove_article(request, pk):
+    article = get_object_or_404(Article, pk=pk, created_by=request.user)
+    article.delete()
+
+    return redirect('articles')

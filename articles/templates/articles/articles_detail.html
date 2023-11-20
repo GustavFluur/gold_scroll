@@ -63,6 +63,16 @@
 
                     </div>
                 </div>
+                {% if request.user == item.created_by %}
+                <div class="mt-6 p-6 bg-white rounded-xl">
+                    <p>This is your item!</p>
+    
+                    <a href="{% url 'articles:delete' article.id %}" class="">Delete</a>
+                </div>
+                {% else %}  
+                    <a href="">Contact Management</a>
+                {% endif %}
+
             </div>
         </div>
 </div>

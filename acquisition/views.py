@@ -6,7 +6,6 @@ def acquisition_view(request):
     return render(request, 'acquisition/acquisition.html')
 
 
-
 def add_to_acquisition(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
@@ -20,3 +19,5 @@ def add_to_acquisition(request, item_id):
     
     request.session['acquisition'] = acquisition
     return redirect(redirect_url)
+
+
