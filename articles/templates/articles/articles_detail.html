@@ -59,20 +59,17 @@
                                 </div>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
+                            <div class="col-16">
+                            <a href="{% url 'remove_article_detail' article.id %}">
+                            <button type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 bg-danger font-weight-bold" value="Remove Article">
+                                <i class="fas fa-trash-alt"> Remove Article</i>
+                            </button>
+                            </a>
+                            </div>
                         </form>
 
                     </div>
                 </div>
-                {% if request.user == item.created_by %}
-                <div class="mt-6 p-6 bg-white rounded-xl">
-                    <p>This is your item!</p>
-    
-                    <a href="{% url 'articles:delete' article.id %}" class="">Delete</a>
-                </div>
-                {% else %}  
-                    <a href="">Contact Management</a>
-                {% endif %}
-
             </div>
         </div>
 </div>

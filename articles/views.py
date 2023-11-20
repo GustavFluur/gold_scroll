@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
@@ -65,6 +66,8 @@ def article_detail(request, article_id):
     return render(request, 'articles/articles_detail.html', context)
 
 
+
+@login_required
 def remove_article(request, pk):
     article = get_object_or_404(Article, pk=pk, created_by=request.user)
     article.delete()
