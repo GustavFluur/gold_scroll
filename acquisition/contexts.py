@@ -13,7 +13,7 @@ def acquisition_contents(request):
 
     for item_id, quantity in acquisition.items():
         article = get_object_or_404(Article, pk=item_id)
-        total += quantity * article.price
+        total += (quantity * article.price)
         article_count += quantity
         acquisition_commodities.append({
             'item_id': item_id,
@@ -21,9 +21,9 @@ def acquisition_contents(request):
             'article': article,
         })
 
-
+ 
     if total < settings.FREE_SHIPPING:
-        delivery = total * Decimal(settings.STANDARD_SHIPPING_PERCENTAGE / 100)
+        delivery = total * float(Decimal(settings.STANDARD_SHIPPING_PERCENTAGE / 100))
         free_shipping_distribution = settings.FREE_SHIPPING - total
     else:
         delivery = 0
