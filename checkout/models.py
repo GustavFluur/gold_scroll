@@ -8,7 +8,7 @@ from articles.models import Article
 
 # Create your models here.
 class Customer_Order(models.Model):
-    distribution_number = models.CharField(max_length=32, null=False, editable=False)
+    distribution_number = models.CharField(max_length=32, null=False, editable=True)
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
@@ -32,12 +32,12 @@ class Customer_Order(models.Model):
     
     def edit_total(self):
 
-        self.order_total = self.lineitems.aggregate(Sum('lineItem_total'))['lineitem_total__sum']
+        self.order_total = self.linbeobjects.aggregate(Sum('lineObject_total'))['lineObject_total__sum']
         if self.order_total < settings.FREE_SHIPPING:
             self.shipping_cost = self.order_total * settings.STANDARD_SHIPPING_PERCENTAGE / 100
         else:
             self.shipping_cost = 0
-        self.grand_total = self.order_total + self.shipping_cost
+        self.sum_total = self.order_total + self.shipping_cost
         self.save()
 
     
@@ -53,15 +53,15 @@ class Customer_Order(models.Model):
 
 
 
-class OrderLineItem(models.Model):
-    order = models.ForeignKey(Customer_Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+class OrderLineObject(models.Model):
+    order = models.ForeignKey(Customer_Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineobjects')
     article = models.ForeignKey(Article, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineItem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineObject_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
 
-        self.lineitem_total = self.article.price * self.quantity
+        self.lineObject_total = self.article.price * self.quantity
         super().save(*args, **kwargs)
 
     def __str__(self):
