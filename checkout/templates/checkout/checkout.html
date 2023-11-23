@@ -90,7 +90,7 @@
                                 <legend class="fieldset-label small text-primary px-2 w-auto">Shipping: <i class="fa-solid fa-truck-fast" style="color: #ffd500;"></i></legend>
                                 {{ order_form.phone_number | as_crispy_field }}
                                 {{ order_form.country | as_crispy_field }}
-                                {{ order_form.postcode | as_crispy_field }}
+                                {{ order_form.zip_code | as_crispy_field }}
                                 {{ order_form.town_or_city | as_crispy_field }}
                                 {{ order_form.street_address1 | as_crispy_field }}
                                 {{ order_form.street_address2 | as_crispy_field }}
@@ -117,7 +117,7 @@
                             <div class="submit-button text-right mt-5 mb-2">                    
                                 <a href="{% url 'acquisition_view' %}" class="btn btn-outline-black rounded-0">
                                     <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
+                                        <i class="far fa-hand-point-left" style="color: #ffd500;"></i>
                                     </span>
                                     <span class="font-weight-bold">Adjust Bag</span>
                                 </a>
