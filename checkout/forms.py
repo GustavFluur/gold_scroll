@@ -7,7 +7,7 @@ class OrderForm(forms.ModelForm):
         model = Customer_Order
         fields = ('first_name', 'last_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
-                  'town_or_city', 'postcode', 'country',
+                  'town_or_city', 'zip_code', 'date_of_birth', 'gender', 'country',
                   'county',)
 
     def __init__(self, *args, **kwargs):
@@ -15,9 +15,11 @@ class OrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         placeholders = {
             'first_name': 'First Name',
-            'first_name': 'Last Name',
+            'last_name': 'Last Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
+            'date_of_birth': 'Date of Birth',
+            'gender': 'Male, Female or Declare Not Say',
             'country': 'Country',
             'zip_code': 'Postal Code',
             'town_or_city': 'Town or City',
