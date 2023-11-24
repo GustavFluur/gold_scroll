@@ -18,7 +18,7 @@ class OrderForm(forms.ModelForm):
             'last_name': 'Last Name',
             'email': 'Email Address',
             'phone_number': 'Phone Number',
-            'date_of_birth': 'Date of Birth',
+            'date_of_birth': 'Year/Month/Date',
             'gender': 'Male, Female or Declare Not Say',
             'country': 'Country',
             'zip_code': 'Postal Code',
