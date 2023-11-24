@@ -1,7 +1,11 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.conf import settings
 
 from .forms import OrderForm
+from acquisition.contexts import acquisition_contents
+
+import stripe 
 
 
 def checkout(request):
@@ -9,6 +13,11 @@ def checkout(request):
     if not acquisition:
         messages.error(request, "There's nothing in your cart at the moment")
         return redirect(reverse('articles'))
+
+
+    contemporary_acquisition = acquisition_contents(request):
+    overall = contemporary_acquisition['summary']
+    stripe_total = round(overall * 100)
 
     order_form = OrderForm()
     template = 'checkout/checkout.html'
