@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.conf import settings
 
 from .forms import OrderForm
-from .models import Order, OrderLineObject
+from .models import Customer_Order, OrderLineObject
 from articles.models import Article
 from acquisition.contexts import acquisition_contents
 
@@ -54,14 +54,14 @@ def checkout(request):
                     return redirect(reverse('acquisition_view'))
 
             request.session['save_purchase_data'] = 'save_purchase_data' in request.POST
-            return redirect(reverse('checkout_success', args=[order.distribution_number]))
+            return redirect(reverse('purchase_success', args=[order.distribution_number]))
         else:
             messages.error(request, 'Your order form did not proceed accordingly due to an error! Please check it again! ')
     else:    
         acquisition = request.session.get('acquisition', {})
         if not acquisition:
             messages.error(request, "There's nothing in your cart at the moment")
-            return redirect(reverse('articles'))form_data
+            return redirect(reverse('articles'))
 
         contemporary_acquisition = acquisition_contents(request)
         overall = contemporary_acquisition['summary']
@@ -93,13 +93,13 @@ def successful_payment(request, distribution_number):
     order = get_object_or_404(Order, distribution_number=distribution_number)
 
     messages.success(request, f'Your order has been received! \
-        Your distribution number is {distribution_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your shipping number is {distribution_number}. A confirmation \
+        will be sent to {order.email}.')
 
     if 'acquisition' in request.session:
         del request.session['acquisition']
 
-    template = 'checkout/checkout_success.html'
+    template = 'checkout/purchase_success.html'
     context = {
         'order': order,
     }

@@ -4,11 +4,10 @@ from django.dispatch import receiver
 from .models import OrderLineObject
 
 @receiver(post_save, sender=OrderLineObject)
-def update_on_save(sender, instance, created, **kwargs):
+def edit_OrderLineObject_on_save(sender, instance, created, **kwargs):
+    instance.order.update_total()
 
-    instance.order.edit_total()
 
 @receiver(post_delete, sender=OrderLineObject)
-def update_on_save(sender, instance, **kwargs):
-
-    instance.order.edit_total()
+def edit_OrderLineObject_on_remove(sender, instance, **kwargs):
+    instance.order.update_total()

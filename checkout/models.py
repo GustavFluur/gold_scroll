@@ -32,7 +32,7 @@ class Customer_Order(models.Model):
     
     def edit_total(self):
 
-        self.order_total = self.linbeobjects.aggregate(Sum('lineObject_total'))['lineObject_total__sum']
+        self.order_total = self.linbeobjects.aggregate(Sum('lineObject_total'))['lineObject_total__sum'] or 0
         if self.order_total < settings.FREE_SHIPPING:
             self.shipping_cost = self.order_total * settings.STANDARD_SHIPPING_PERCENTAGE / 100
         else:
