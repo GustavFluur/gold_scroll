@@ -25,6 +25,9 @@ class Customer_Order(models.Model):
     shipping_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     sum_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_acquisition = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+
 
     def produce_distribution_number(self):
         
