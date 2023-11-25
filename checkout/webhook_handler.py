@@ -1,5 +1,8 @@
 from django.http import HttpResponse
 
+from .models import Customer_Order, OrderLineObject 
+from articles.models import Article
+
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
@@ -33,7 +36,7 @@ class StripeWH_Handler:
         billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2) 
-for field, value in shipping_details.address.items():
+        for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
 
@@ -87,12 +90,12 @@ for field, value in shipping_details.address.items():
                 for item_id, item_data in json.loads(bag).items():
                     article = Article.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                        order_line_object = OrderLineObject(
                             order=order,
                             article=article,
                             quantity=item_data,
                         )
-                        order_line_item.save()
+                        order_line_object.save()
 
             except Exception as e:
                 if order:

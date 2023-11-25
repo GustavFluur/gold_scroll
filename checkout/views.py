@@ -54,7 +54,12 @@ def checkout(request):
         }
         order_form = OrderForm(customer_order_data)
         if customer_order_data.is_valid():
-            order = customer_order_data.save()
+            order = customer_order_data.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_acquisition = json.dumps(acquisition)
+            order.save()
+
             for item_id, item_data in acquisition.items():
                 try:
                     article = Article.objects.get(id=item_id)

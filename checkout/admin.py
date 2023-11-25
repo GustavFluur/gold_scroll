@@ -13,13 +13,15 @@ class Customer_OrderAdmin(admin.ModelAdmin):
 
     readonly_fields = ('distribution_number', 'date',
                        'shipping_cost', 'order_total',
-                       'sum_total',)
+                       'sum_total','original_acquisition', 
+                       'stripe_pid')
 
     fields = (  'distribution_number', 'first_name','last_name',
                 'email', 'phone_number', 'country','zip_code', 
                 'town_or_city', 'street_address1', 'street_address2', 
                 'county', 'gender', 'date_of_birth', 'shipping_cost',
-                'order_total', 'sum_total',)
+                'order_total', 'sum_total' 'original_acquisition', 
+                       'stripe_pid',)
     
     list_display = ('distribution_number', 'first_name','last_name',
                     'order_total', 'shipping_cost',

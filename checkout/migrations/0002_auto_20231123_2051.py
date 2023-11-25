@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
             field=models.CharField(max_length=32),
         ),
         migrations.DeleteModel(
-            name='OrderLineItem',
+            name='OrderLineObject',
         ),
         migrations.AddField(
             model_name='orderlineobject',
