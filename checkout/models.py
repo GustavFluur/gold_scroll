@@ -6,11 +6,13 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 from articles.models import Article
+from accounts.models import UserAccount
 
 
 # Create your models here.
 class Customer_Order(models.Model):
     distribution_number = models.CharField(max_length=32, null=False, editable=True)
+    scroll_user_profile =  models.ForeignKey(UserAccount, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     first_name = models.CharField(max_length=50, null=False, blank=False)
     last_name = models.CharField(max_length=50, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
