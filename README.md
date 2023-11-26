@@ -96,11 +96,13 @@
 - [ ] 		update product 
 - [ ] 		delete product 
 
-# Stripe
+### Stripe
 - [ ]       payment into the app (using stripe) (Need to: go stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the:           
             STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section))
 	
 - [ ] 		Make sure the form to add product is validated (be specific about what the users are sending through the form)
+
+### Other
 
 - [ ] 		Modifying & adjusting some of the attributes other contents form Boutique Ado to my own project. 
             - JS file & some other template files have to be updated accordingly to complete the project till next time.
