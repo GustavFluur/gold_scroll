@@ -4,7 +4,7 @@
 ![Gold Scroll](documentation/readme/gold-scroll.png)
 
 
-# * Disclaimer: 
+# * Disclaimer 1: 
 ###  Unfortunately this project has led to undesired result than anticipated,
 ###  Due to lots of personal stress, recent sickness in flu and long days at work + scarce assistance from TUT support by all 90 minutes per week came to an end before submission did led to the work on this project hasn't reach its objective.
 ### I am well aware that this will led to absolute failure to its grading, yet I am coming with my frank words in beginning in this readme.md file so the exception isn't as high to start with to whom whoever is reading this message or scan the project itself for its features & orientation.
@@ -25,7 +25,10 @@
     - Thus the credit cart function is gone and it was seen before on the checkout page
     - It's an "arrow" that you use on the Merchandise list to direct you back on the top of the page, it's now gone since this technological failure occurred. 
    
+# * Disclaimer 2:
 
+- During the grading and feedback I will start a new project to get all templates ready for the next submission date, once I am terrible sorry for this submission. 
+- I am submitting it to see what feedbacks or suggestions I will get by one of you who are in charge of my grading.  
 
 # FEATURES:
 - Lots of the features in this project is quite similar to Boutique Ado & thus another reason to this projects failure. 
@@ -135,13 +138,10 @@
 ### These sources will be continued to be used after the grading and feedback on this project. 
 
 - [Boutique Ado](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) - [Website: ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/?child=last) & [Full-Template: ](https://github.com/Code-Institute-Org/ci-full-template)
-
-
 - [Learn Django by Building an Online Marketplace – Python Tutorial for Beginners](https://www.youtube.com/watch?v=ZxMB6Njs3ck)
 - [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y)
 - [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4&t=1795s)
 ### Found these this stripe sources late and will be implemented after feedback:
 - [How to use Stripe for payment in Django](https://www.youtube.com/watch?v=hZYWtK2k1P8)
 - [Django and Stripe Payments Tutorial](https://www.youtube.com/watch?v=722A27IoQnk)
-- []()
-- []()
+
