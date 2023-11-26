@@ -95,31 +95,32 @@
 - [ ]       add product
 - [ ] 		update product 
 - [ ] 		delete product 
+# -----------------------------------------------------------------------------------------------------------------------	
 # Stripe
 - [ ]       payment into the app (using stripe) (Need to: go stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the:           
             STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section))
-		
+# -----------------------------------------------------------------------------------------------------------------------		
 - [ ] 		Make sure the form to add product is validated (be specific about what the users are sending through the form)
-
+# -----------------------------------------------------------------------------------------------------------------------	
 - [ ] 		Modifying & adjusting some of the attributes other contents form Boutique Ado to my own project. 
             - JS file & some other template files have to be updated accordingly to complete the project till next time.
-
+# -----------------------------------------------------------------------------------------------------------------------	
 - [ ] 		Create a function where is no image for one of the merchandises, needs be shown a image where it signals that something is missing.  
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Create a newsletter functionality
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		A facebook page
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		User profile feature
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Login/register
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Restrict non logged in users from accessing some pages and some functionalities like adding products, deleting and updating
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Include a sitemap on your application to allow search engine bot crawling - Meta up in the page. 
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Include a robots.txt file to control search engine bot crawling - Marketing elements 
-		
+# -----------------------------------------------------------------------------------------------------------------------			
 - [ ] 		Use an Agile tool to manage the planning and implementation of all primary functionality
 
 
