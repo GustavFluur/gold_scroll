@@ -70,7 +70,7 @@
 - Button: "Acquire for some more" - you go back to the merchandise list-
 - Button: "Add to merchandise acquisition" goes to the acquisition page 
 - Button: "Remove Article" isn't functioning at this moment and a regular user must not see that in the future. 
-
+![Click "Add to Merchandise acquisition](documentation/readme/To-add-product-to-cart.png)
 ![Add to acquisition page](documentation/readme/added-article-to-cart.png)
 
 ### Once you click on the wallet or acquisition:
@@ -80,13 +80,16 @@
 ![Acquisition page](documentation/readme/cart-area-of-gold_scroll.png)
 
 
+![Checkout page part 1](documentation/readme/checkout-page.part1.png)
+![Checkout page part 2](documentation/readme/checkout-page.part2.png)
 
 
 ## Left to implement:
-
+### CRUD
 - [ ]       add product
 - [ ] 		update product 
 - [ ] 		delete product 
+# Stripe
 - [ ]       payment into the app (using stripe) (Need to: go stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the:           
             STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section))
 		
