@@ -42,7 +42,7 @@
 
 ![Buy Now Button](documentation/readme/buy-now-button.png)
 
-### 6 All Gold Merchandise button in the navbar
+###  or click "All Gold Merchandise" button in the navbar
 
 ![All Gold Merchandise button](documentation/readme/all-gold-merchandise-button.png)
 
