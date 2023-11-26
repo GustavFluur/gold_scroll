@@ -50,6 +50,14 @@
 
 ![Merchandise List](documentation/readme/merchandise-list_page.png)
 
+### In the Merchandise List you can filter the merchs according to it's rating and price:
+
+### Price
+![Merchandise List](documentation/readme/merch-after-price*.png)
+
+### Rating 
+![Merchandise List](documentation/readme/merch-after-rating*.png)
+
 
 
 
