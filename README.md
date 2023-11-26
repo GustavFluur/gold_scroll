@@ -51,10 +51,14 @@
 - Upload to Heroku
 - Add the project's Data Base to Elephant SQL 
 
+# Media
+ - [Pexels](https://www.pexels.com/)
+ - [Merchandise images where taken from Amazon](https://www.amazon.se/-/en/)
+
 
 # Credits
 
-### These sources will be used after the grading and feedback on this project
+### These sources will be continued to be used after the grading and feedback on this project. 
 
 - [Boutique Ado](https://github.com/Code-Institute-Solutions/Django3blog/tree/master/12_final_deployment) - [Website: ](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/?child=last) & [Full-Template: ](https://github.com/Code-Institute-Org/ci-full-template)
 
@@ -62,4 +66,8 @@
 - [Learn Django by Building an Online Marketplace – Python Tutorial for Beginners](https://www.youtube.com/watch?v=ZxMB6Njs3ck)
 - [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y)
 - [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4&t=1795s)
-- [Codemy.com -Create A Simple Django Blog ](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+### Found these this stripe sources late and will be implemented after feedback:
+- [How to use Stripe for payment in Django](https://www.youtube.com/watch?v=hZYWtK2k1P8)
+- [Django and Stripe Payments Tutorial](https://www.youtube.com/watch?v=722A27IoQnk)
+- []()
+- []()
