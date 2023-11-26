@@ -52,13 +52,32 @@
 
 ### In the Merchandise List you can filter the merchs according to it's rating and price:
 
-### Price
-![Merchandise List](documentation/readme/merch-after-price*.png)
+#### Price
+![Price Filter](documentation/readme/merch-after-price*.png)
 
-### Rating 
-![Merchandise List](documentation/readme/merch-after-rating*.png)
+#### Rating 
+![Rating Filter](documentation/readme/merch-after-rating*.png)
 
+### Once you click on a product 
+- you see its details
+- price
+- name 
+- description 
+- quantity 
 
+### ---------------------------------------------------------------------------
+
+- Button: "Acquire for some more" - you go back to the merchandise list-
+- Button: "Add to merchandise acquisition" goes to the acquisition page 
+- Button: "Remove Article" isn't functioning at this moment and a regular user must not see that in the future. 
+
+![Add to acquisition page](documentation/readme/added-article-to-cart.png)
+
+### Once you click on the wallet or acquisition:
+
+- You see the article of your choice:
+
+![Acquisition page](documentation/readme/cart-area-of-gold_scroll.png)
 
 
 
@@ -72,6 +91,11 @@
             STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section))
 		
 - [ ] 		Make sure the form to add product is validated (be specific about what the users are sending through the form)
+
+- [ ] 		Modifying & adjusting some of the attributes other contents form Boutique Ado to my own project. 
+            - JS file & some other template files have to be updated accordingly to complete the project till next time.
+
+- [ ] 		Create a function where is no image for one of the merchandises, needs be shown a image where it signals that something is missing.  
 		
 - [ ] 		Create a newsletter functionality
 		
