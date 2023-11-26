@@ -17,7 +17,18 @@
 ### Obsolete learning content from Code Institute 
 - e.g. Allauth recent setup looks very differently compared to Boutique Ado, thus a confusing element. (After grading this will be deleted and another login or sign up pages will be created independently )
 - Stripe has changed a lot since the video from Code Institute uploaded its learning video, 
-- Terrible assistance from TUT support and Code Institute not to grant for another extension, which was needed for this project.   
+- Terrible assistance from TUT support and Code Institute not to grant for another extension, which was needed for this project.
+
+
+# FEATURES:
+
+- The features that I had to time to implement 
+- Due to some issues regarding the migrations I was forced to to delete the previous files on all the apps, guided by "Roman" on TuT support on Code Institute.
+    - Thus the credit cart function is gone and it was seen before on the checkout page
+    - It's an "arrow" that you use on the Merchandise list to direct you back on the top of the page, it's now gone since this technological failure occured. 
+    - Stripe is installed on the website it's shows that "payments" has been made yet:
+        - I need to go to stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the : STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section)
+
 
 ## Left to implement:
 
