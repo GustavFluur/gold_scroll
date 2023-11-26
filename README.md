@@ -16,18 +16,43 @@
 
 ### Obsolete learning content from Code Institute 
 - e.g. Allauth recent setup looks very differently compared to Boutique Ado, thus a confusing element. (After grading this will be deleted and another login or sign up pages will be created independently )
-- Stripe has changed a lot since the video from Code Institute uploaded its learning video, 
-- Terrible assistance from TUT support and Code Institute not to grant for another extension, which was needed for this project.
+- Stripe has changed a lot since the video from Code Institute uploaded its learning video, yet,
+     - Stripe is installed on the website it's shows that "payments" has been made yet:
+        - I need to go to stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the : STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section)
+
+- Due to some issues regarding the migrations I was forced to to delete the previous files on all the apps, guided by "Roman" on TuT support on Code Institute.
+![Migration fix](documentation/readme/error/tut-support-instructions.png)
+    - Thus the credit cart function is gone and it was seen before on the checkout page
+    - It's an "arrow" that you use on the Merchandise list to direct you back on the top of the page, it's now gone since this technological failure occurred. 
+   
 
 
 # FEATURES:
+- Lots of the features in this project is quite similar to Boutique Ado & thus another reason to this projects failure. 
 
-- The features that I had to time to implement 
-- Due to some issues regarding the migrations I was forced to to delete the previous files on all the apps, guided by "Roman" on TuT support on Code Institute.
-    - Thus the credit cart function is gone and it was seen before on the checkout page
-    - It's an "arrow" that you use on the Merchandise list to direct you back on the top of the page, it's now gone since this technological failure occured. 
-    - Stripe is installed on the website it's shows that "payments" has been made yet:
-        - I need to go to stripe dashboard create webhook with urls of your gitpod project (first setting up local webhook) and copy webhook secret key in the : STRIPE_WH_SECRET variable (but its all in detail explained in the walkthrough videos under stripe section)
+#### This is how it looks like for now and changes will be adjusted:
+
+#### The features that I had to time to implement: 
+
+## Opening Page:
+
+![Opening page](documentation/readme/opening-page.png)
+
+### Click on the "Buy Now" Button:
+
+![Buy Now Button](documentation/readme/buy-now-button.png)
+
+### 6 All Gold Merchandise button in the navbar
+
+![All Gold Merchandise button](documentation/readme/all-gold-merchandise-button.png)
+
+### You come to the Merchandise/Product list:
+
+![Merchandise List](documentation/readme/merchandise-list_page.png)
+
+
+
+
 
 
 ## Left to implement:
