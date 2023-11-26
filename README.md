@@ -79,9 +79,12 @@
 
 ![Acquisition page](documentation/readme/cart-area-of-gold_scroll.png)
 
+### Checkout page:
 
 ![Checkout page part 1](documentation/readme/checkout-page.part1.png)
 ![Checkout page part 2](documentation/readme/checkout-page.part2.png)
+- Due to the error and issue I had regarding the migration, the credit card fields has disappeared and you are unable to add those credentials there. 
+
 
 
 ## Left to implement:
